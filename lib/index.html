@@ -4,19 +4,30 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Praise&family=Press+Start+2P&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/src/css/style.css">
-    <title>Dog Encyclopedia</title>
+    <title>Open Weather API</title>
 </head>
 <body>
-    <section class="Sum"></section>
-    <span></span>
-    <span></span>
-
-    <h1>For All Dogs!</h1>
-    <div id="Breed">
-        <button id="breedBtn">Breed List</button>
-        <button id="randomBtn">Dog Pics</button>
+    <h1>The Weather Channel</h1>
+    Current weather in Cleveland is <span id="Temp"></span>
+    But it feels like <span id="ActualFeel"></span>
+    <p>To check the weather in your location fill out the boxes below</p>
+    <h3>Your Weather</h3>
+    <p>Insert Zip on the first box and what country your in on the second</p>
+    <p>Ex. (44102 | us)</p>
+    <input type="text" id="Zip"/>
+    <input type="text" id="Country"/>
+    <button id="Enter" onclick="getLocation()">Enter</button>
+    <span id="submitForm"></span>
+    <h3>Weather Humdidity</h3>
+    <p>Insert zip in first box and country on second just like above to get your weather description</p>
+    <input type="text" id="Zippy"/>
+    <input type="text" id="Countryyy"/>
+    <button id="enter" onclick="getDescription()">Enter</button>
+    <span id="theDescript"></span>
     </div>
     <script src="/src/js/app.js"></script>
+    <footer>&copy; 2021 Public API</footer>
 </body>
 </html>

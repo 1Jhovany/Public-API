@@ -2,6 +2,44 @@
     text-align: center;
 }
 
+h1 {
+    font-family: 'Anton', sans-serif;
+    font-size: medium;
+    color: black;
+    border: solid;
+    border-radius: 20rem;
+    border-color: black;
+    background-color:lightblue;
+    margin-left: 28rem;
+    margin-right: 28rem;
+}
+
+p { 
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+span {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+h3 {
+    font-family: cursive;
+    font-weight: bold;
+}
+
 body {
-    background-image: url();
+    background-image: url(https://content.api.news/v3/images/bin/9da010285ed2df52012e9db32f3bf03b);
+}
+
+footer{
+    font-family: 'Anton', sans-serif;
+    font-weight: bolder;
+    color: black;
+    border: solid;
+    border-radius: 20rem;
+    border-color: black;
+    background-color:lightblue;
+    margin-left: 28rem;
+    margin-right: 28rem;
+    margin-top: 20rem;
 }

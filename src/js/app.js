@@ -1,26 +1,35 @@
-export default() => {
-    getBreeds();
-}
-//const apiKey = ""
+const cityElement = document.getElementById("City")
+const tempElement = document.getElementById("Temp")
+const actualTemp = document.getElementById("ActualFeel")
+const locationElement = document.getElementById("submitForm")
+const descriptionElement = document.getElementById("theDescript")
+const apiKey = '32bd05c06854f18620a8413478125292';
 
-const breedsBtn = document.getElementById('breedBtn').addEventListener('click', getBreeds);
-const ranBtn = document.getElementById('randomBtn').addEventListener('click', getDogs);
+let zipCode = '44125';
+let countryCode = 'us';
 
-function getBreeds(){
-    fetch ('https://dog.ceo/api/breeds/list/all')
-    .then(response => response.json ())
+    fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zipCode},${countryCode}&units=imperial&appid=${apiKey}`)
+    .then(response => response.json())
     .then(data => {
-        console.log(data.results);
-        const Breeds = data.results.map(Breeds => {
-            return `
-            <h3>${Breeds.name}</h3>
-            `;
-        }).join(" ");
-        console.log(Breeds);
-        document.getElementById('App').innerHTML = Breeds;
-    })
-    .catch(err => console.log(err));
-}
-function getDogs(){
+        tempElement.innerText = data.main.temp;
+        actualTemp.innerText = data.main.feels_like;
+    });
 
+function getLocation(){
+    const zipCode = document.getElementById('Zip').value;
+    const countryCode = document.getElementById('Country').value;
+    fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zipCode},${countryCode}&units=imperial&appid=${apiKey}`)
+    .then(response => response.json())
+    .then(data => {
+        locationElement.innerText = "Your temp is " + data.main.temp;
+    });
+}
+function getDescription(){
+    const zipCode = document.getElementById('Zippy').value;
+    const countryCode = document.getElementById('Countryyy').value;
+    fetch(`https://api.openweathermap.org/data/2.5/weather?zip=${zipCode},${countryCode}&units=imperial&appid=${apiKey}`)
+    .then(response => response.json())
+    .then(data => {
+        descriptionElement.innerText = "Your humidity is " + data.main.humidity;
+    });
 }
