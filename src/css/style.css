@@ -31,6 +31,13 @@ body {
     background-image: url(https://content.api.news/v3/images/bin/9da010285ed2df52012e9db32f3bf03b);
 }
 
+ul {
+    justify-content: center;
+    list-style: none;
+    font-family: 'Anton', sans-serif;
+    font-weight: 550;
+}
+
 footer{
     font-family: 'Anton', sans-serif;
     font-weight: bolder;
@@ -41,5 +48,5 @@ footer{
     background-color:lightblue;
     margin-left: 28rem;
     margin-right: 28rem;
-    margin-top: 20rem;
+    margin-top: 10rem;
 }
